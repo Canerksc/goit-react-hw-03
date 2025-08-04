@@ -12,11 +12,11 @@ const ContactForm = ({ onAdd }) => {
   const validationSchema = Yup.object({
     name: Yup.string()
       .min(3, 'Minimum 3 karakter')
-      .max(50, 'Maksimum 50 karakter')
+      .max(10, 'Maksimum 50 karakter')
       .required('Zorunlu alan'),
-    number: Yup.number()
+    number: Yup.string()
       .min(3, 'Minimum 3 karakter')
-      .max(50, 'Maksimum 50 karakter')
+      .max(10, 'Maksimum 50 karakter')
       .required('Zorunlu alan'),
   });
 
@@ -45,7 +45,7 @@ const ContactForm = ({ onAdd }) => {
 
         <label>
           Number
-          <Field name="number" type="text" />
+          <Field name="number" type="number" />
           <ErrorMessage name="number" component="div" className={styles.error} />
         </label>
 
