@@ -14,7 +14,7 @@ const ContactForm = ({ onAdd }) => {
       .min(3, 'Minimum 3 karakter')
       .max(50, 'Maksimum 50 karakter')
       .required('Zorunlu alan'),
-    number: Yup.string()
+    number: Yup.number()
       .min(3, 'Minimum 3 karakter')
       .max(50, 'Maksimum 50 karakter')
       .required('Zorunlu alan'),
